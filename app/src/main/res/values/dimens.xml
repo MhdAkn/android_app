@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_marge">48dp</dimen>
+    <dimen name="size25">25sp</dimen>
+    <dimen name="pad4">4dp</dimen>
+
+    <dimen name="size05" >5dp</dimen>
+</resources>

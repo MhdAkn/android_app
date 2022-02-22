@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Game Quiz</string>
+    <string name="cat_default_name">nom de la categorie</string>
+    <string name="cate">Categorie</string>
+    <string name="quizM">Les questions à choix mutiples</string>
+    <string name="culture">Culture générale</string>
+    <string name="sport">Sport</string>
+    <string name="informatique">Informatique</string>
+    <string name="litterature">Littérature</string>
+    <string name="musique">Musique</string>
+    <string name="quiz1">Question 1</string>
+    <string name="scoreLab">Ton score</string>
+    <string name="choix1">Choix 1</string>
+    <string name="restart">Reprendre le questionnaire</string>
+    <string name="choix2">Choix 2</string>
+    <string name="choix3">Choix 3</string>
+    <string name="musqiue">Musique</string>
+
+
+</resources>

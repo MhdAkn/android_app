@@ -1,0 +1,31 @@
+{
+  "players":[
+	
+
+	{
+		"playername":"Sam",
+		"categorieName":"Culture Générale",
+                "score":"6/10"
+	},
+        {
+		"playername":"Toto",
+		"categorieName":"Informatique",
+                "score":"4/10"
+	},
+        {
+		"playername":"Andréa",
+		"categorieName":"Musique",
+                "score":"7/10"
+	},
+        {
+		"playername":"Anewar",
+		"categorieName":"Littérature",
+                "score":"8/10"
+	},
+        {
+		"playername":"Josias",
+		"categorieName":"Sport",
+                "score":"3/5"
+	}
+           ]
+}
