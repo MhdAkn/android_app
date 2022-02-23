@@ -83,7 +83,7 @@ public class quizSport extends AppCompatActivity {
         View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.score,(LinearLayout)findViewById(R.id.idLscore));
         TextView score = bottomSheetView.findViewById(R.id.idScore);
         Button restartQuiz = bottomSheetView.findViewById(R.id.idRestart);
-        score.setText("Ton score est \n"+currentScore + "/5");
+        score.setText("Ton score est \n"+currentScore + "/10");
         restartQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,8 +103,8 @@ public class quizSport extends AppCompatActivity {
 
     //
     private void setDataToView(int currentPos){
-        questionNum.setText("Questions réussies :"+ currentScore+ "/5");
-        if (questionAttempted > 5){
+        questionNum.setText("Questions réussies :"+ currentScore+ "/10");
+        if (questionAttempted > 10){
             showBottom();
         }else {
             question.setText(quizModArrayList.get(currentPos).getQuestion());
@@ -121,6 +121,10 @@ public class quizSport extends AppCompatActivity {
         quizModArrayList.add(new quizMod("Quel nom porte un terrain de tennis  ?","La surface","Le court","La terre battue","La surface"));
         quizModArrayList.add(new quizMod("Qui a recu le ballon d'or 2021 ?","Lewandoski","Messi","Christiano Ronaldo","Messi"));
         quizModArrayList.add(new quizMod("Quelle est la couleur d'une balle de tennis ?","Vert","Jaune","Rouge","Jaune"));
-
+        quizModArrayList.add(new quizMod("Dans quel club se trouve actuellent Messi?","Paris-Saint-Germain","Manchester City","Barcelone FC","Paris-Saint-Germain"));
+        quizModArrayList.add(new quizMod("Quel joueur a pris la coupe de la FIFA 2021?","Messi","Lewandoski","Muller","Lewandoski"));
+        quizModArrayList.add(new quizMod("Quelle est le pays organisateur de la CAN 2022 ?","Caméroun","Sénégal","Egypt","Caméroun"));
+        quizModArrayList.add(new quizMod("Quel africain joue actuellement dans le club Liverpool?","Mohamed SALAH","Idrassa GANA GUEYE","Pape GUEYE","Mohamed SALAH"));
+        quizModArrayList.add(new quizMod("Quelle équipe nationale a pris l'Euro 2021 ?","Italie","France","Croatie","Italie"));
     }
 }

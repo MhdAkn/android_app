@@ -5,18 +5,20 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.List;
-
+// class adaptateur pour la listview
 public class scoreAdapter extends BaseAdapter{
-
+//decklaration des variables
     private Context context;
     private List<Score> ScoreItemList;
     private LayoutInflater inflater;
-
+//function constructor
     public scoreAdapter(Context context, List<Score> ScoreItemList) {
         this.context = context;
         this.ScoreItemList = ScoreItemList;
@@ -37,7 +39,7 @@ public class scoreAdapter extends BaseAdapter{
     public long getItemId(int i) {
         return 0;
     }
-
+//methode gestion de la view
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflater.inflate(R.layout.adapterlist, null);
@@ -58,7 +60,7 @@ public class scoreAdapter extends BaseAdapter{
         textScore.setText(itemSco);
 
 
-        view.setOnClickListener(new View.OnClickListener() {
+       view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent( context,ActivityList.class);
@@ -66,6 +68,10 @@ public class scoreAdapter extends BaseAdapter{
             }
         });
 
+
         return view;
+
     }
+
+
 }

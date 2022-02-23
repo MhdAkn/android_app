@@ -16,11 +16,13 @@
         android:layout_marginTop="@dimen/medium_marge"
         android:layout_marginEnd="@dimen/medium_marge"
         android:layout_marginBottom="@dimen/medium_marge"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/material_on_primary_emphasis_high_type"
         android:padding="@dimen/dimen1"
-        android:backgroundTint="#AFA01D"
-        android:textSize="@dimen/size25"
-        android:text="@string/sport"
+        android:text="@string/culture"
         android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="@dimen/size25"
         tools:ignore="RtlCompat" />
 
     <LinearLayout
@@ -32,7 +34,7 @@
         <TextView
             android:id="@+id/textview2"
             android:layout_width="323dp"
-            android:layout_height="64dp"
+            android:layout_height="70dp"
             android:layout_marginStart="@dimen/medium_marge"
             android:layout_marginTop="@dimen/medium_marge"
             android:layout_marginEnd="@dimen/medium_marge"
@@ -40,29 +42,44 @@
             android:backgroundTint="#2196F3"
             android:paddingTop="@dimen/dimen1"
             android:textColor="@color/white"
-
-            android:text="@string/quiz1" />
+            android:text="@string/quiz1"
+            android:textSize="25dp"/>
 
 
         <TextView
-            android:layout_marginLeft="@dimen/dimen1"
+
             android:id="@+id/checkBox1"
             android:layout_width="323dp"
             android:layout_height="64dp"
+            android:layout_marginLeft="35dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen1"
+            android:background="@drawable/quizd"
             android:text="@string/choix1" />
 
         <TextView
-            android:layout_marginLeft="@dimen/dimen1"
+
             android:layout_width="323dp"
             android:layout_height="64dp"
             android:id="@+id/checkBox2"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/quizd"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen1"
             android:text="@string/choix2" />
 
         <TextView
-            android:layout_marginLeft="@dimen/dimen1"
+
             android:layout_width="323dp"
+            android:background="@drawable/quizd"
             android:layout_height="64dp"
             android:id="@+id/checkBox3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen1"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
             android:text="@string/choix3" />
 
     </LinearLayout>

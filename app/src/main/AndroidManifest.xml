@@ -17,8 +17,14 @@
             android:name=".ActivityList"
             android:exported="true" />
         <activity
-            android:name=".ViewScore"
-            android:exported="true" />
+            android:name=".flash"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".quizLitterature"
             android:exported="true" />
@@ -34,11 +40,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".quizCulture"

@@ -18,26 +18,18 @@ import java.util.ArrayList;
 
 public class ActivityList extends AppCompatActivity {
     ListView list;
+    //declaration d'un arraylist
     ArrayList<Object> laliste;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-
-
-        /*TextView outputNom = findViewById(R.id.playerName);
-        TextView outputCat = findViewById(R.id.categorieName);
-        TextView outputScore= findViewById(R.id.score);
-*/
         list = findViewById(R.id.listDefault);
         laliste = new ArrayList<Object>();
 
         String json ;
         InputStream jsonFile ;
-
-        //Intent intent = getIntent();
-        //int position = (int) intent.getExtras().get("position");
-
+//lecture contenu du fichier json
         try {
             jsonFile =this.getAssets().open("player.json");
             int size = jsonFile.available();
@@ -47,12 +39,8 @@ public class ActivityList extends AppCompatActivity {
             json = new String(buffer, "UTF-8");
             JSONObject object = new JSONObject(json);
 
-           /* outputNom.setVisibility(View.VISIBLE);
-            outputCat.setVisibility(View.VISIBLE);
-            outputScore.setVisibility(View.VISIBLE);*/
-
-
             JSONArray childArray = object.getJSONArray("players");
+            //  affichage du contenu du fichier json au nniveau de la liste itermediaire
             for (int i = 0; i < childArray.length(); i++) {
                 laliste.add(childArray.getJSONObject(i).getString("playername"));
 
@@ -64,15 +52,27 @@ public class ActivityList extends AppCompatActivity {
         final ArrayAdapter<Object> adapter= new ArrayAdapter<Object>(this, android.R.layout.simple_list_item_1,laliste);
         list.setAdapter(adapter);
         list.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
+        //action de click direction vers l'activité correspondante
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getBaseContext(),ViewScore.class);
-                intent.putExtra("position",position);
-                if(intent !=null){
-                    startActivity(intent);
+                if (position == 0) {
+                    startActivity(new Intent(ActivityList.this, quizCulture.class));
+                }
+                if (position == 1) {
+                    startActivity(new Intent(ActivityList.this,quizInformatique.class));
+                }
+                else if ((position == 2 ) /*(itemCateg == "Informatique")*/) {
+                    startActivity(new Intent(ActivityList.this, quizMusique.class));
+                }
+                else if ((position == 3) /*itemCateg == "Musique"*/) {
+                    startActivity(new Intent(ActivityList.this, quizLitterature.class));
+                }
+                else if ((position == 4 ) /*itemCateg == "Sport"*/) {
+                    startActivity(new Intent(ActivityList.this, quizSport.class));
                 }
             }
         });
+
     }
 }
