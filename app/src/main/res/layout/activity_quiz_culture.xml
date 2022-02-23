@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/brown"
+
     tools:context="MhdAkn.quizzgames.quizCulture">
+
     <TextView
         android:id="@+id/textview1"
         android:layout_width="wrap_content"
@@ -14,11 +17,11 @@
         android:layout_marginTop="@dimen/medium_marge"
         android:layout_marginEnd="@dimen/medium_marge"
         android:layout_marginBottom="@dimen/medium_marge"
-        android:padding="@dimen/dimen1"
         android:backgroundTint="#AFA01D"
-        android:textSize="@dimen/size25"
+        android:padding="@dimen/dimen1"
         android:text="@string/culture"
         android:textAlignment="center"
+        android:textSize="@dimen/size25"
         tools:ignore="RtlCompat" />
 
     <LinearLayout
@@ -37,25 +40,27 @@
             android:layout_marginBottom="@dimen/medium_marge"
             android:backgroundTint="#2196F3"
             android:paddingTop="@dimen/dimen1"
+            android:textColor="@color/white"
+
             android:text="@string/quiz1" />
 
 
         <TextView
-
+            android:layout_marginLeft="@dimen/dimen1"
+            android:id="@+id/checkBox1"
             android:layout_width="323dp"
             android:layout_height="64dp"
-            android:id="@+id/checkBox1"
             android:text="@string/choix1" />
 
         <TextView
-
+            android:layout_marginLeft="@dimen/dimen1"
             android:layout_width="323dp"
             android:layout_height="64dp"
             android:id="@+id/checkBox2"
             android:text="@string/choix2" />
 
         <TextView
-
+            android:layout_marginLeft="@dimen/dimen1"
             android:layout_width="323dp"
             android:layout_height="64dp"
             android:id="@+id/checkBox3"

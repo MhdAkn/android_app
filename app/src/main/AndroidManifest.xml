@@ -5,11 +5,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/download"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/download"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizzGames">
+        <activity
+            android:name=".View_score"
+            android:exported="false" />
         <activity
             android:name=".ActivityList"
             android:exported="true" />
@@ -21,8 +24,7 @@
             android:exported="true" />
         <activity
             android:name=".quizSport"
-            android:exported="true"
-            tools:ignore="MissingClass" />
+            android:exported="true" />
         <activity
             android:name=".quizMusique"
             android:exported="true" />
@@ -32,11 +34,12 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-                <intent-filter >
-                        <action android:name="android.intent.action.MAIN"/>
-                        <category android:name="android.intent.category.LAUNCHER"/>
-                </intent-filter>
-         </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".quizCulture"
             android:exported="true" />

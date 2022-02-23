@@ -20,8 +20,6 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
-
-
 public class ViewScore extends AppCompatActivity {
 
     @Override
@@ -29,13 +27,12 @@ public class ViewScore extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_score);
 
-
         TextView name = findViewById(R.id.playerName);
         TextView categorie  = findViewById(R.id.categorieName);
         TextView score = findViewById(R.id.score);
 
-        String json ;
-        InputStream jsonFile ;
+        String json= null;
+        InputStream jsonFile= null;
 
         Intent intent = getIntent();
         int position = (int) intent.getExtras().get("position");
@@ -56,7 +53,7 @@ public class ViewScore extends AppCompatActivity {
             JSONArray childArray = object.getJSONArray("players");
             for (int i = 0; i < childArray.length(); i++) {
                 if (position == i){
-                    name.setText(childArray.getJSONObject(i).getString("playerName"));
+                    name.setText(childArray.getJSONObject(i).getString("playername"));
                     categorie.setText(childArray.getJSONObject(i).getString("categorieName"));
                     score.setText(childArray.getJSONObject(i).getString("score"));
 

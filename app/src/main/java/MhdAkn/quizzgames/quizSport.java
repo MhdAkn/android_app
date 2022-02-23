@@ -117,7 +117,7 @@ public class quizSport extends AppCompatActivity {
     //presentation des questions et choix de reponse
     private void getQuizQuestion(ArrayList<quizMod> quizModArrayList) {
         quizModArrayList.add(new quizMod("Combien de ballon d'or Christiano Ronaldo a obtenue?","5","6","7","5"));
-        quizModArrayList.add(new quizMod("Où auront lieu les jeux Olympiques d’été en 2016?","Doha","Rio de Janeiro","Chicago","Rio de Janeiro"));
+        quizModArrayList.add(new quizMod("Où ont lieu les jeux Olympiques d’été en 2016?","Doha","Rio de Janeiro","Chicago","Rio de Janeiro"));
         quizModArrayList.add(new quizMod("Quel nom porte un terrain de tennis  ?","La surface","Le court","La terre battue","La surface"));
         quizModArrayList.add(new quizMod("Qui a recu le ballon d'or 2021 ?","Lewandoski","Messi","Christiano Ronaldo","Messi"));
         quizModArrayList.add(new quizMod("Quelle est la couleur d'une balle de tennis ?","Vert","Jaune","Rouge","Jaune"));

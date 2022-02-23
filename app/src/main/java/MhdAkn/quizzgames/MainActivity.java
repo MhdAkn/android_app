@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (position == 4) {
                     startActivity(new Intent(MainActivity.this, quizLitterature.class));
                 } else if (position == 5) {
-                startActivity(new Intent(MainActivity.this, ViewScore.class));
+                startActivity(new Intent(MainActivity.this, View_score.class));
             }
             }
 
